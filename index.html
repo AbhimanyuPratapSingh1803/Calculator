@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/output.css">
+</head>
+<body class="body">
+    <div class="wrapper flex justify-center items-center h-screen w-screen text-[#EEEEEE] bg-[#ACE1AF]">
+        <div class="container flex flex-wrap flex-col h-auto w-[350px] p-2">
+            <div class="flex justify-between w-full px-3 mb-4 h-auto">
+                <p class="title text-slate-900 font-semibold text-5xl">Calculator</p>
+                <button>
+                    <img class="changeColor pr-2 pt-3" src="Assets/moon.svg" alt="" onclick="changeTheme">
+                </button>
+            </div>
+            <div class=" flex justify-between h-auto w-full mt-3 mb-3 px-3">
+                <div class="input flex text-[18px] font-semibold justify-center h-16 bg-slate-900 items-center w-3/4 rounded-[50px]">
+                    <input class="result bg-slate-900 w-3/4 h-1/2" type="text" placeholder = "Input">
+                </div>
+                <button class="op text-2xl flex justify-center items-center h-16 w-16 rounded-[60px] bg-orange-400 hover:bg-orange-300" onclick="result.value = ``">C</button>
+            </div>
+    
+            <div class="flex font-semibold justify-evenly h-auto text-2xl w-full mb-2">
+                <button class="num flex justify-center items-center rounded-[60px] bg-slate-900 h-16 w-16 hover:bg-slate-700" onclick="expression(7)">7</button>
+                <button class="num flex justify-center items-center rounded-[60px] bg-slate-900 h-16 w-16 hover:bg-slate-700" onclick="expression(8)">8</button>
+                <button class="num flex justify-center items-center rounded-[60px] bg-slate-900 h-16 w-16 hover:bg-slate-700" onclick="expression(9)">9</button>
+                <button class="op flex justify-center items-center rounded-[60px] bg-orange-400 h-16 w-16 hover:bg-orange-300" onclick="expression(`*`)">*</button>
+            </div>
+            <div class="flex font-semibold justify-evenly h-auto text-2xl w-full mb-2">
+                <button class="num flex justify-center items-center rounded-[60px] bg-slate-900 h-16 w-16 hover:bg-slate-700" onclick="expression(4)">4</button>
+                <button class="num flex justify-center items-center rounded-[60px] bg-slate-900 h-16 w-16 hover:bg-slate-700" onclick="expression(5)">5</button>
+                <button class="num flex justify-center items-center rounded-[60px] bg-slate-900 h-16 w-16 hover:bg-slate-700" onclick="expression(6)">6</button>
+                <button class="op flex justify-center items-center rounded-[60px] bg-orange-400 h-16 w-16 hover:bg-orange-300" onclick="expression(`-`)">-</button>
+            </div>
+            <div class="flex font-semibold justify-evenly h-auto text-2xl w-full mb-2">
+                <button class="num flex justify-center items-center rounded-[60px] bg-slate-900 h-16 w-16 hover:bg-slate-700" onclick="expression(1)">1</button>
+                <button class="num flex justify-center items-center rounded-[60px] bg-slate-900 h-16 w-16 hover:bg-slate-700" onclick="expression(2)">2</button>
+                <button class="num flex justify-center items-center rounded-[60px] bg-slate-900 h-16 w-16 hover:bg-slate-700" onclick="expression(3)">3</button>
+                <button class="op flex justify-center items-center rounded-[60px] bg-orange-400 h-16 w-16 hover:bg-orange-300" onclick="expression(`+`)">+</button>
+            </div>
+            <div class="flex font-semibold justify-evenly h-auto text-2xl w-full mb-2">
+                <button class="num flex justify-center items-center rounded-[60px] bg-slate-900 h-16 w-16 hover:bg-slate-700" onclick="expression(0)">0</button>
+                <button class="num flex justify-center items-center rounded-[60px] bg-slate-900 h-16 w-16 hover:bg-slate-700" onclick="expression(`.`)">.</button>
+                <button class="op flex justify-center items-center rounded-[60px] bg-orange-400 h-16 w-16 hover:bg-orange-300" onclick="expression(`/`)">/</button>
+                <button class="op flex justify-center items-center rounded-[60px] bg-orange-400 h-16 w-16 hover:bg-orange-300" onclick="calculate(result.value)">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
